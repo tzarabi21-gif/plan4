@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: nexa-web
+    env: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: APP_URL
+        sync: false
+      - key: DB_HOST
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASS
+        sync: false
+      - key: ADMIN_INITIAL_PASSWORD
+        sync: false
